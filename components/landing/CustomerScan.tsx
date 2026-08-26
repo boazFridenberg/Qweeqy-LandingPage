@@ -39,7 +39,7 @@ const POINTS = [
 
 export function CustomerScan() {
   return (
-    <section id="solution" className="px-5 py-16 sm:px-8 sm:py-24">
+    <section id="solution" className="px-5 py-14 sm:px-8 sm:py-20">
       <div className="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-2">
         <div>
           <p className="text-[12px] tracking-[0.16em] text-gold">הפתרון</p>
@@ -71,7 +71,7 @@ export function CustomerScan() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-[1.8rem] border border-pearl/10 bg-surface p-6"
+          className="rounded-[1.8rem] border border-pearl/10 bg-surface p-6 shadow-[0_10px_32px_-18px_rgba(20,18,16,0.14)]"
         >
           <p className="text-[11px] text-pearl/65">תצוגת לקוח בנייד · בלי אפליקציה</p>
           <div className="mt-4 overflow-hidden rounded-3xl border border-pearl/10 bg-inset">

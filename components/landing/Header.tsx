@@ -6,9 +6,11 @@ import { Menu, X } from "lucide-react";
 import { Ltr } from "@/components/landing/Ltr";
 
 const NAV_LINKS = [
-  { href: "#problem", label: "הבעיה" },
-  { href: "#solution", label: "הפתרון" },
-  { href: "#reasons", label: "יתרונות" },
+  { href: "#solution", label: "סריקה" },
+  { href: "#owner", label: "כלים" },
+  { href: "#advantages", label: "יתרונות" },
+  { href: "#problems", label: "פותר בעיות" },
+  { href: "#pricing", label: "מחיר" },
   { href: "#contact", label: "הדגמה" },
 ];
 

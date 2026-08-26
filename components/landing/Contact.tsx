@@ -45,11 +45,10 @@ export function Contact() {
         <div>
           <p className="text-[12px] tracking-[0.16em] text-gold">יצירת קשר</p>
           <h2 className="mt-2 font-display text-3xl text-pearl sm:text-4xl">
-            רוצים לראות איך זה עובד בחנות שלכם?
+            רוצים לראות איך זה עובד אצלכם?
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-pearl/80">
-            השאירו פרטים וקבלו מידע. נראה איך סריקת QR ומלאי חי יכולים לקצר את העבודה
-            אצלכם ברצפה. אפשר גם לכתוב ישירות למייל או להתקשר.
+            השאירו פרטים. נחזור עם מידע ברור — בלי סיבובים.
           </p>
           <div className="mt-8 space-y-3 text-sm">
             <a

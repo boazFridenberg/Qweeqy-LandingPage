@@ -14,17 +14,20 @@ export function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-pearl/80">
-          <a href="#problem" className="hover:text-pearl">
-            הבעיה
-          </a>
           <a href="#solution" className="hover:text-pearl">
-            הפתרון
+            סריקה
           </a>
-          <a href="#reasons" className="hover:text-pearl">
+          <a href="#owner" className="hover:text-pearl">
+            כלים
+          </a>
+          <a href="#advantages" className="hover:text-pearl">
             יתרונות
           </a>
-          <a href="#about" className="hover:text-pearl">
-            אודות
+          <a href="#problems" className="hover:text-pearl">
+            פותר בעיות
+          </a>
+          <a href="#pricing" className="hover:text-pearl">
+            מחיר
           </a>
           <a href="#contact" className="hover:text-pearl">
             יצירת קשר

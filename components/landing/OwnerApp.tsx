@@ -29,7 +29,7 @@ const FEATURES = [
 
 export function OwnerApp() {
   return (
-    <section id="owner" className="px-5 py-16 sm:px-8 sm:py-24">
+    <section id="owner" className="px-5 py-14 sm:px-8 sm:py-20">
       <div className="mx-auto max-w-6xl">
         <p className="text-[12px] tracking-[0.16em] text-gold">מנוע 02 · Mobile App + Web Dashboard</p>
         <h2 className="mt-2 max-w-2xl font-display text-3xl text-pearl sm:text-4xl">
@@ -47,7 +47,7 @@ export function OwnerApp() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.06 }}
-              className="rounded-[1.5rem] border border-pearl/10 bg-surface p-6"
+              className="rounded-[1.5rem] border border-pearl/10 bg-surface p-6 shadow-[0_10px_32px_-18px_rgba(20,18,16,0.14)]"
             >
               <feature.icon size={20} className="text-gold" />
               <h3 className="mt-5 text-lg font-semibold text-pearl">{feature.title}</h3>
