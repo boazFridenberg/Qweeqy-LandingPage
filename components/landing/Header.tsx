@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-5">
-      <nav className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between rounded-full border border-pearl/10 bg-surface/80 px-4 py-2.5 shadow-[0_12px_40px_-16px_rgba(44,41,36,0.18)] backdrop-blur-xl sm:px-6">
+      <nav className="pointer-events-auto mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/15 bg-white/10 px-4 py-2.5 shadow-[0_12px_40px_-16px_rgba(76,29,149,0.45)] backdrop-blur-xl sm:px-6">
         <a href="#top" className="flex items-center gap-2">
           <span className="flex h-8 w-8 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-[11px] font-bold text-gold">
             Q
@@ -60,7 +60,7 @@ export function Header() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="pointer-events-auto mx-auto mt-2 max-w-6xl rounded-3xl border border-pearl/10 bg-surface/95 p-5 backdrop-blur-xl md:hidden"
+            className="pointer-events-auto mx-auto mt-2 max-w-6xl rounded-3xl border border-white/15 bg-[#1c0c33]/90 p-5 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-2">
               {NAV_LINKS.map((link) => (

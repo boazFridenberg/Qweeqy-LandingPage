@@ -1,30 +1,67 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-void: #faf7f2;
-  --color-surface: #ffffff;
-  --color-inset: #f3efe8;
-  --color-pearl: #141210;
-  --color-gold: #1d4ed8;
-  --color-gold-soft: #93c5fd;
-  --color-silver: #8a8580;
+  --color-void: #10051c;
+  --color-surface: #2b1650;
+  --color-inset: #1c0c33;
+  --color-pearl: #ffffff;
+  --color-gold: #e9d5ff;
+  --color-gold-soft: #c084fc;
+  --color-silver: #c4b5fd;
   --font-sans: var(--font-heebo);
   --font-display: var(--font-heebo);
 }
 
 html {
   scroll-behavior: smooth;
+  background: #10051c;
 }
 
 body {
-  background: #faf7f2;
-  color: #141210;
+  color: #ffffff;
   font-family: var(--font-heebo), "Segoe UI", Tahoma, sans-serif;
+  background-color: #10051c;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 12% -8%, rgba(168, 85, 247, 0.55), transparent 58%),
+    radial-gradient(ellipse 70% 50% at 92% 8%, rgba(236, 72, 153, 0.28), transparent 52%),
+    radial-gradient(ellipse 55% 45% at 78% 92%, rgba(99, 102, 241, 0.4), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 6% 78%, rgba(147, 51, 234, 0.32), transparent 50%),
+    linear-gradient(165deg, #1a0832 0%, #0d0518 42%, #1c0a38 72%, #12061f 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 40% 35%, rgba(192, 132, 252, 0.14), transparent 28%),
+    radial-gradient(circle at 65% 60%, rgba(129, 140, 248, 0.12), transparent 26%);
+}
+
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+main,
+header,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 ::selection {
-  background: #93c5fd;
-  color: #141210;
+  background: #c084fc;
+  color: #ffffff;
 }
 
 .gold-cta {
@@ -32,20 +69,20 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 48%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #6d28d9 0%, #c026d3 48%, #7c3aed 100%);
   padding: 0.85rem 1.6rem;
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #fffdf8;
-  box-shadow: 0 16px 40px -12px rgba(29, 78, 216, 0.38);
+  color: #ffffff;
+  box-shadow: 0 16px 40px -12px rgba(168, 85, 247, 0.55);
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
 .gold-cta:hover {
   transform: translateY(-1px);
-  filter: brightness(1.05);
-  box-shadow: 0 20px 48px -10px rgba(29, 78, 216, 0.45);
+  filter: brightness(1.08);
+  box-shadow: 0 20px 48px -10px rgba(192, 132, 252, 0.6);
 }
 
 .gold-cta:disabled {
@@ -55,5 +92,5 @@ body {
 }
 
 .shoe-float {
-  filter: drop-shadow(0 20px 24px rgba(20, 18, 16, 0.16));
+  filter: drop-shadow(0 20px 24px rgba(76, 29, 149, 0.45));
 }
