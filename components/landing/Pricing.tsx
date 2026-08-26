@@ -17,7 +17,7 @@ export function Pricing() {
           מחיר פשוט. ערך שמכניס הרבה.
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-pearl/80">
-          בלי חבילות מסובכות ובלי אותיות קטנות. תשלום אחד ברור — ומקבלים מערכת שמחזירה זמן ברצפה,
+          בלי חבילות מסובכות ובלי אותיות קטנות. תשלום אחד ברור — ומקבלים מערכת  שמשאירה את המוכר בחנות,
           שליטה במלאי, ומכירות שהיו הולכות לאיבוד.
         </p>
         <a href="#contact" className="gold-cta mt-8 inline-flex items-center gap-2">
