@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { CheckCircle2, Loader2, Mail, Phone } from "lucide-react";
 import { Ltr } from "@/components/landing/Ltr";
 import { CONTACT_EMAIL } from "@/lib/contact";
@@ -15,20 +15,25 @@ const INITIAL: ContactFormValues = {
   message: "",
 };
 
+function subscribe() {
+  return () => {};
+}
+
+function getNextUrl() {
+  return `${window.location.origin}/?contact=sent#contact`;
+}
+
+function getSentFromUrl() {
+  return new URLSearchParams(window.location.search).get("contact") === "sent";
+}
+
 export function Contact() {
   const [values, setValues] = useState(INITIAL);
   const [submitting, setSubmitting] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [nextUrl, setNextUrl] = useState("");
-
-  useEffect(() => {
-    const origin = window.location.origin;
-    setNextUrl(`${origin}/?contact=sent#contact`);
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("contact") === "sent") {
-      setSent(true);
-    }
-  }, []);
+  const [dismissed, setDismissed] = useState(false);
+  const nextUrl = useSyncExternalStore(subscribe, getNextUrl, () => "");
+  const sentFromUrl = useSyncExternalStore(subscribe, getSentFromUrl, () => false);
+  const sent = sentFromUrl && !dismissed;
 
   function update<K extends keyof ContactFormValues>(key: K, value: string) {
     setValues((current) => ({ ...current, [key]: value }));
@@ -80,7 +85,7 @@ export function Contact() {
                 type="button"
                 className="mt-6 text-sm text-gold"
                 onClick={() => {
-                  setSent(false);
+                  setDismissed(true);
                   setValues(INITIAL);
                   window.history.replaceState(null, "", "/#contact");
                 }}
