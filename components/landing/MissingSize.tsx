@@ -19,7 +19,7 @@ export function MissingSize() {
         <h2 className="mt-2 max-w-2xl font-display text-3xl text-pearl sm:text-4xl">
           במקום ״מצטערים, אין״ — שומרים על הלקוח
         </h2>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-pearl/55">
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-pearl/80">
           מידה חסרה לא חייבת להיות סוף השיחה. המערכת עוזרת להציע חלופה, סניף אחר או מעקב — כדי לא
           לאבד מכירה בגלל חוסר נקודתי.
         </p>
@@ -31,11 +31,11 @@ export function MissingSize() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl"
+              className="rounded-[1.5rem] border border-pearl/10 bg-surface p-6"
             >
               <item.icon size={18} className="text-gold" />
               <h3 className="mt-4 font-semibold text-pearl">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-pearl/55">{item.copy}</p>
+              <p className="mt-2 text-sm leading-relaxed text-pearl/80">{item.copy}</p>
             </motion.article>
           ))}
         </div>

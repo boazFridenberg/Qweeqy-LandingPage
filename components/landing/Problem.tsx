@@ -16,7 +16,7 @@ export function Problem() {
           {QUESTIONS.map((question) => (
             <span
               key={question}
-              className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-pearl/75"
+              className="rounded-full border border-pearl/10 bg-surface px-4 py-2 text-sm text-pearl/75"
             >
               ״{question}״
             </span>
@@ -43,11 +43,11 @@ export function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
-              className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl"
+              className="rounded-[1.5rem] border border-pearl/10 bg-surface p-6"
             >
               <p className="text-[12px] text-gold">{String(index + 1).padStart(2, "0")}</p>
               <h3 className="mt-3 text-lg font-semibold text-pearl">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-pearl/55">{item.copy}</p>
+              <p className="mt-2 text-sm leading-relaxed text-pearl/80">{item.copy}</p>
             </motion.article>
           ))}
         </div>

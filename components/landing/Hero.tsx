@@ -34,7 +34,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.16 }}
-            className="mt-6 max-w-lg text-base leading-relaxed text-pearl/60 sm:text-lg"
+            className="mt-6 max-w-lg text-base leading-relaxed text-pearl/80 sm:text-lg"
           >
             <Ltr>Qweeqy</Ltr> הופכת את חוויית הקנייה בחנות לחכמה ומהירה יותר. הלקוח סורק{" "}
             <Ltr>QR</Ltr> ורואה מידות, צבעים ומלאי — בלי אפליקציה. המוכר לא צריך לרוץ למחסן על כל שאלה.
@@ -51,7 +51,7 @@ export function Hero() {
             </a>
             <a
               href="#problem"
-              className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-[13px] text-pearl/70 transition hover:border-gold/40 hover:text-pearl"
+              className="inline-flex items-center rounded-full border border-pearl/15 bg-surface px-5 py-3 text-[13px] text-pearl/70 transition hover:border-gold/40 hover:text-pearl"
             >
               למה זה חשוב
             </a>
@@ -60,7 +60,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.32 }}
-            className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[12px] text-pearl/45"
+            className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[12px] text-pearl/70"
           >
             <li>בלי הורדת אפליקציה ללקוח</li>
             <li>מידות ומלאי מיד בסריקה</li>
@@ -84,19 +84,19 @@ export function Hero() {
 function HeroMock() {
   return (
     <div className="relative mx-auto max-w-md">
-      <div className="absolute inset-x-10 bottom-4 h-16 rounded-full bg-black/70 blur-2xl" />
-      <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl">
+      <div className="absolute inset-x-10 bottom-4 h-16 rounded-full bg-pearl/15 blur-2xl" />
+      <div className="relative overflow-hidden rounded-[2rem] border border-pearl/10 bg-surface p-5 shadow-[0_20px_50px_-28px_rgba(44,41,36,0.28)]">
         <div className="mb-4 flex items-center justify-between">
           <p className="text-[11px] text-gold">הלקוח סורק בחנות</p>
-          <span className="text-[11px] text-pearl/40">בלי אפליקציה</span>
+          <span className="text-[11px] text-pearl/65">בלי אפליקציה</span>
         </div>
-        <div className="grid grid-cols-[1fr_auto] gap-4 rounded-2xl border border-white/10 bg-void/60 p-4">
+        <div className="grid grid-cols-[1fr_auto] gap-4 rounded-2xl border border-pearl/10 bg-inset p-4">
           <div>
-            <p className="text-[11px] text-pearl/40">דגם</p>
+            <p className="text-[11px] text-pearl/65">דגם</p>
             <p className="mt-1 font-medium">
               <Ltr>Nike Air Max 90</Ltr>
             </p>
-            <p className="mt-3 text-[11px] text-pearl/40">מידות במלאי הסניף</p>
+            <p className="mt-3 text-[11px] text-pearl/65">מידות במלאי הסניף</p>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {["40", "41", "42", "43", "44"].map((size) => (
                 <span
@@ -104,7 +104,7 @@ function HeroMock() {
                   className={`rounded-md border px-2 py-1 text-[11px] ${
                     size === "43"
                       ? "border-gold/50 bg-gold/15 text-gold"
-                      : "border-white/10 text-pearl/70"
+                      : "border-pearl/10 text-pearl/70"
                   }`}
                 >
                   {size}

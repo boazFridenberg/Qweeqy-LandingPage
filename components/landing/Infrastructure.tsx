@@ -38,11 +38,11 @@ export function Infrastructure() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
-              className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl"
+              className="rounded-[1.5rem] border border-pearl/10 bg-surface p-6"
             >
               <item.icon size={20} className="text-gold" />
               <h3 className="mt-5 text-lg font-semibold text-pearl">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-pearl/55">{item.copy}</p>
+              <p className="mt-2 text-sm leading-relaxed text-pearl/80">{item.copy}</p>
             </motion.article>
           ))}
         </div>

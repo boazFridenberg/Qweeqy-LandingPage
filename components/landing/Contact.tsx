@@ -47,14 +47,14 @@ export function Contact() {
           <h2 className="mt-2 font-display text-3xl text-pearl sm:text-4xl">
             רוצים לראות איך זה עובד בחנות שלכם?
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-pearl/55">
+          <p className="mt-4 text-sm leading-relaxed text-pearl/80">
             השאירו פרטים וקבלו מידע. נראה איך סריקת QR ומלאי חי יכולים לקצר את העבודה
             אצלכם ברצפה. אפשר גם לכתוב ישירות למייל או להתקשר.
           </p>
           <div className="mt-8 space-y-3 text-sm">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-pearl/80 hover:border-gold/40"
+              className="flex items-center gap-3 rounded-2xl border border-pearl/10 bg-surface px-4 py-3 text-pearl/80 hover:border-gold/40"
             >
               <Mail size={16} className="text-gold" />
               <span>
@@ -63,7 +63,7 @@ export function Contact() {
             </a>
             <a
               href="tel:0526488443"
-              className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-pearl/80 hover:border-gold/40"
+              className="flex items-center gap-3 rounded-2xl border border-pearl/10 bg-surface px-4 py-3 text-pearl/80 hover:border-gold/40"
             >
               <Phone size={16} className="text-gold" />
               <span>
@@ -73,12 +73,12 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl sm:p-8">
+        <div className="rounded-[1.8rem] border border-pearl/10 bg-surface p-6 sm:p-8">
           {sent ? (
             <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
               <CheckCircle2 className="text-gold" size={40} />
               <p className="mt-4 text-xl font-semibold text-pearl">הפנייה נשלחה</p>
-              <p className="mt-2 max-w-sm text-sm text-pearl/55">
+              <p className="mt-2 max-w-sm text-sm text-pearl/80">
                 תודה. בדקו את תיבת {CONTACT_EMAIL} (וגם ספאם). בפעם הראשונה יש לאשר מייל מ־FormSubmit.
               </p>
               <button
@@ -140,13 +140,13 @@ export function Contact() {
                 />
               </div>
               <label className="sm:col-span-2">
-                <span className="mb-1.5 block text-[12px] text-pearl/40">ספרו על החנות</span>
+                <span className="mb-1.5 block text-[12px] text-pearl/65">ספרו על החנות</span>
                 <textarea
                   name="message"
                   rows={4}
                   value={values.message}
                   onChange={(event) => update("message", event.target.value)}
-                  className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-pearl outline-none focus:border-gold/40"
+                  className="w-full resize-none rounded-xl border border-pearl/15 bg-inset px-3 py-2.5 text-sm text-pearl outline-none focus:border-gold/40"
                   placeholder="מספר סניפים, מותגים, מה כואב היום בניהול המלאי..."
                 />
               </label>
@@ -184,14 +184,14 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-[12px] text-pearl/40">{label}</span>
+      <span className="mb-1.5 block text-[12px] text-pearl/65">{label}</span>
       <input
         name={name}
         type={type}
         required={required}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-pearl outline-none focus:border-gold/40"
+        className="w-full rounded-xl border border-pearl/15 bg-inset px-3 py-2.5 text-sm text-pearl outline-none focus:border-gold/40"
       />
     </label>
   );

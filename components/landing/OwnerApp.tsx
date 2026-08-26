@@ -35,7 +35,7 @@ export function OwnerApp() {
         <h2 className="mt-2 max-w-2xl font-display text-3xl text-pearl sm:text-4xl">
           הכלים של בעל החנות והצוות
         </h2>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-pearl/55">
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-pearl/80">
           במקום להקליד ידנית כל <Ltr>Nike</Ltr> וכל <Ltr>Adidas</Ltr>, המערכת ממלאת את הטופס לבד.
           אתם מגדירים מחיר ומידות — ומדפיסים מדבקה.
         </p>
@@ -47,11 +47,11 @@ export function OwnerApp() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.06 }}
-              className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl"
+              className="rounded-[1.5rem] border border-pearl/10 bg-surface p-6"
             >
               <feature.icon size={20} className="text-gold" />
               <h3 className="mt-5 text-lg font-semibold text-pearl">{feature.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-pearl/55">{feature.copy}</p>
+              <p className="mt-2 text-sm leading-relaxed text-pearl/80">{feature.copy}</p>
             </motion.article>
           ))}
         </div>

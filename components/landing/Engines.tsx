@@ -47,14 +47,14 @@ export function Engines() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
-              className="group rounded-[1.6rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl transition hover:border-gold/35 hover:bg-white/[0.06]"
+              className="group rounded-[1.6rem] border border-pearl/10 bg-surface p-6 shadow-[0_10px_30px_-20px_rgba(44,41,36,0.2)] transition hover:border-gold/35 hover:bg-inset"
             >
               <div className="flex items-center justify-between">
                 <engine.icon className="text-gold" size={22} />
-                <span className="text-[12px] text-pearl/30">{engine.number}</span>
+                <span className="text-[12px] text-pearl/55">{engine.number}</span>
               </div>
               <h3 className="mt-8 text-xl font-semibold text-pearl">{engine.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-pearl/55">{engine.copy}</p>
+              <p className="mt-3 text-sm leading-relaxed text-pearl/80">{engine.copy}</p>
               <p className="mt-6 text-[12px] text-gold/80 group-hover:text-gold">לפרטים</p>
             </motion.a>
           ))}

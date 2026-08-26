@@ -83,7 +83,7 @@ export function Reasons() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: (index % 4) * 0.05 }}
-              className="flex gap-4 rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl"
+              className="flex gap-4 rounded-[1.5rem] border border-pearl/10 bg-surface p-5"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-gold/10 text-gold">
                 <item.icon size={18} />
@@ -92,7 +92,7 @@ export function Reasons() {
                 <h3 className="font-semibold text-pearl">
                   <span className="ms-0 text-[12px] text-gold">{index + 1}.</span> {item.title}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-pearl/55">{item.copy}</p>
+                <p className="mt-1 text-sm leading-relaxed text-pearl/80">{item.copy}</p>
               </div>
             </motion.article>
           ))}

@@ -32,7 +32,7 @@ export function Insights() {
             {BENEFITS.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-pearl/75"
+                className="flex items-start gap-3 rounded-2xl border border-pearl/10 bg-surface px-4 py-3 text-sm text-pearl/75"
               >
                 <span className="mt-0.5 text-gold">✓</span>
                 {item}
@@ -44,18 +44,18 @@ export function Insights() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl"
+          className="rounded-[1.8rem] border border-pearl/10 bg-surface p-7"
         >
           <p className="text-[12px] tracking-[0.16em] text-gold">מידע שמניע החלטות</p>
           <h3 className="mt-2 text-xl font-semibold text-pearl">נתונים שעוזרים לנהל מלאי ורכש</h3>
-          <p className="mt-3 text-sm leading-relaxed text-pearl/55">
+          <p className="mt-3 text-sm leading-relaxed text-pearl/80">
             המערכת משרתת את הלקוח ברצפה — ומציגה לבעל החנות מה באמת קורה: סריקות, מידות שחיפשו, וחסרים.
           </p>
           <div className="mt-6 space-y-2">
             {INSIGHTS.map((item) => (
               <p
                 key={item}
-                className="rounded-xl border border-white/10 bg-void/40 px-4 py-3 text-sm text-pearl/70"
+                className="rounded-xl border border-pearl/10 bg-inset px-4 py-3 text-sm text-pearl/70"
               >
                 {item}
               </p>

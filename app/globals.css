@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-void: #0b0b0c;
-  --color-pearl: #f4f1ea;
-  --color-gold: #c4a574;
-  --color-gold-soft: #e8d5a3;
-  --color-silver: #c0c4cc;
+  --color-void: #f4eee4;
+  --color-surface: #ebdbc0;
+  --color-inset: #e0cdb1;
+  --color-pearl: #161410;
+  --color-gold: #8b6234;
+  --color-gold-soft: #c4a574;
+  --color-silver: #8a8580;
   --font-sans: var(--font-heebo);
   --font-display: var(--font-heebo);
 }
@@ -15,8 +17,8 @@ html {
 }
 
 body {
-  background: #0b0b0c;
-  color: #f4f1ea;
+  background: #f4eee4;
+  color: #161410;
   font-family: var(--font-heebo), "Segoe UI", Tahoma, sans-serif;
 }
 
@@ -26,13 +28,14 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 80;
-  opacity: 0.035;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::selection {
   background: #c4a574;
-  color: #0b0b0c;
+  color: #161410;
 }
 
 .gold-cta {
@@ -40,20 +43,20 @@ body::before {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #8a7340 0%, #e8d5a3 48%, #c4a574 100%);
+  background: linear-gradient(135deg, #6f4b24 0%, #c4a574 48%, #8b6234 100%);
   padding: 0.85rem 1.6rem;
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #0b0b0c;
-  box-shadow: 0 16px 40px -12px rgba(196, 165, 116, 0.55);
+  color: #fffdf8;
+  box-shadow: 0 16px 40px -12px rgba(139, 98, 52, 0.38);
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
 .gold-cta:hover {
   transform: translateY(-1px);
-  filter: brightness(1.06);
-  box-shadow: 0 20px 48px -10px rgba(232, 213, 163, 0.6);
+  filter: brightness(1.05);
+  box-shadow: 0 20px 48px -10px rgba(139, 98, 52, 0.45);
 }
 
 .gold-cta:disabled {
@@ -63,5 +66,5 @@ body::before {
 }
 
 .shoe-float {
-  filter: drop-shadow(0 28px 28px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 20px 24px rgba(44, 41, 36, 0.18));
 }
