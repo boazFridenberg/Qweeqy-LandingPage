@@ -16,7 +16,7 @@ export function POS() {
       <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
         <div>
           <p className="text-[12px] tracking-[0.16em] text-gold">מנוע 03 · POS Cashier · Web & Mobile</p>
-          <h2 className="mt-2 font-display text-3xl text-pearl sm:text-4xl">קופה בלחיצה אפס</h2>
+          <h2 className="mt-2 font-display text-3xl text-pearl sm:text-4xl">קופה מהירה</h2>
           <p className="mt-4 text-sm leading-relaxed text-pearl/55">
             הקופאי סורק את ה־<Ltr>QR</Ltr> שעל הנעל. המערכת מורידה מלאי באופן אטומי ב־
             <Ltr>Supabase</Ltr>, מפעילה רטט וצליל אישור, וממתינה 1.5 שניות לפני הסריקה הבאה — כדי

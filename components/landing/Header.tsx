@@ -6,9 +6,10 @@ import { Menu, X } from "lucide-react";
 import { Ltr } from "@/components/landing/Ltr";
 
 const NAV_LINKS = [
-  { href: "#engines", label: "המערכת" },
-  { href: "#about", label: "אודות" },
-  { href: "#contact", label: "יצירת קשר" },
+  { href: "#problem", label: "הבעיה" },
+  { href: "#solution", label: "הפתרון" },
+  { href: "#reasons", label: "יתרונות" },
+  { href: "#contact", label: "הדגמה" },
 ];
 
 export function Header() {
@@ -38,7 +39,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a href="#contact" className="gold-cta hidden px-5 py-2 text-[12px] sm:inline-flex">
-            לרכישת המערכת
+            למידע ורכישה
           </a>
           <button
             type="button"
@@ -71,7 +72,7 @@ export function Header() {
                 </a>
               ))}
               <a href="#contact" onClick={() => setOpen(false)} className="gold-cta mt-2">
-                לרכישת המערכת
+                למידע ורכישה
               </a>
             </div>
           </motion.div>

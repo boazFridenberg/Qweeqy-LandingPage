@@ -6,11 +6,11 @@ import { ScanQrCode, Smartphone, MonitorSmartphone } from "lucide-react";
 const ENGINES = [
   {
     id: "customer",
-    href: "#customer",
+    href: "#solution",
     icon: ScanQrCode,
     number: "01",
     title: "חוויית הלקוח בחנות",
-    copy: "סריקת QR במצלמת הנייד — בלי אפליקציה. מלאי חי, מדידה בתלת־ממד ו־AR, והמלצות מתוך המלאי של אותה חנות.",
+    copy: "סריקת QR במצלמת הנייד — בלי אפליקציה. מידות, צבעים, מחיר ומלאי חי, והמלצות מתוך מה שיש בחנות.",
   },
   {
     id: "owner",

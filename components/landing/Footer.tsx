@@ -10,12 +10,18 @@ export function Footer() {
         <div>
           <Ltr className="text-lg font-semibold tracking-[0.22em] text-pearl">QWEEQY</Ltr>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-pearl/50">
-            פלטפורמת ניהול לחנויות נעליים. מלאי, קופה וחוויית לקוח — במערכת אחת.
+            פחות לחפש. יותר למכור. מערכת לניהול מידות ומלאי בחנות הפיזית.
           </p>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-pearl/60">
-          <a href="#engines" className="hover:text-pearl">
-            המערכת
+          <a href="#problem" className="hover:text-pearl">
+            הבעיה
+          </a>
+          <a href="#solution" className="hover:text-pearl">
+            הפתרון
+          </a>
+          <a href="#reasons" className="hover:text-pearl">
+            יתרונות
           </a>
           <a href="#about" className="hover:text-pearl">
             אודות
@@ -29,7 +35,7 @@ export function Footer() {
         </div>
       </div>
       <p className="mx-auto mt-10 max-w-6xl text-[12px] text-pearl/30">
-        © {new Date().getFullYear()} Qweeqy · מערכת הפעלה לחנות הנעליים הפיזית
+        © {new Date().getFullYear()} Qweeqy · מערכת הפעלה לחנות שלך
       </p>
       <p className="mx-auto mt-2 max-w-6xl text-[12px] text-pearl/30">
         המערכת פותחה על ידי בעז פרידנברג · מייל:{" "}

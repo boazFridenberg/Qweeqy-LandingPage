@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, QrCode, ScanLine, Store } from "lucide-react";
+import { ArrowLeft, QrCode } from "lucide-react";
 import { Ltr } from "@/components/landing/Ltr";
 
 export function Hero() {
@@ -18,7 +18,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-5 text-[12px] tracking-[0.16em] text-gold"
           >
-            פלטפורמה לניהול החנות שלך
+            מערכת חכמה לניהול מידות ומלאי בחנות
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
@@ -26,9 +26,9 @@ export function Hero() {
             transition={{ delay: 0.08 }}
             className="font-display text-4xl font-extrabold leading-[1.15] text-pearl sm:text-5xl lg:text-6xl"
           >
-            חוויית האונליין.
+            פחות לחפש.
             <br />
-            בתוך החנות הפיזית.
+            יותר למכור.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -36,8 +36,8 @@ export function Hero() {
             transition={{ delay: 0.16 }}
             className="mt-6 max-w-lg text-base leading-relaxed text-pearl/60 sm:text-lg"
           >
-            <Ltr>Qweeqy</Ltr> מגשרת בין ניהול המלאי של בעל החנות לבין חוויית הקנייה של הלקוח.
-            סריקת <Ltr>QR</Ltr> בלי אפליקציה, מלאי חי, קופה בלחיצה אפס, וקליטת מק״ט אוטומטית.
+            <Ltr>Qweeqy</Ltr> הופכת את חוויית הקנייה בחנות לחכמה ומהירה יותר. הלקוח סורק{" "}
+            <Ltr>QR</Ltr> ורואה מידות, צבעים ומלאי — בלי אפליקציה. המוכר לא צריך לרוץ למחסן על כל שאלה.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -46,14 +46,14 @@ export function Hero() {
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <a href="#contact" className="gold-cta inline-flex items-center gap-2">
-              לרכישת המערכת
+              למידע ורכישה
               <ArrowLeft size={16} />
             </a>
             <a
-              href="#engines"
+              href="#problem"
               className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-[13px] text-pearl/70 transition hover:border-gold/40 hover:text-pearl"
             >
-              איך זה עובד
+              למה זה חשוב
             </a>
           </motion.div>
           <motion.ul
@@ -62,9 +62,9 @@ export function Hero() {
             transition={{ delay: 0.32 }}
             className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[12px] text-pearl/45"
           >
-            <li>עברית מלאה ו־<Ltr>RTL</Ltr></li>
             <li>בלי הורדת אפליקציה ללקוח</li>
-            <li>אבטחה ברמה גבוהה</li>
+            <li>מידות ומלאי מיד בסריקה</li>
+            <li>פחות מכירות שהולכות לאיבוד</li>
           </motion.ul>
         </div>
 
@@ -87,8 +87,8 @@ function HeroMock() {
       <div className="absolute inset-x-10 bottom-4 h-16 rounded-full bg-black/70 blur-2xl" />
       <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl">
         <div className="mb-4 flex items-center justify-between">
-          <p className="text-[11px] text-gold">סריקת לקוח בחנות</p>
-          <Ltr className="text-[11px] text-pearl/40">store_rothschild</Ltr>
+          <p className="text-[11px] text-gold">הלקוח סורק בחנות</p>
+          <span className="text-[11px] text-pearl/40">בלי אפליקציה</span>
         </div>
         <div className="grid grid-cols-[1fr_auto] gap-4 rounded-2xl border border-white/10 bg-void/60 p-4">
           <div>
@@ -96,7 +96,7 @@ function HeroMock() {
             <p className="mt-1 font-medium">
               <Ltr>Nike Air Max 90</Ltr>
             </p>
-            <p className="mt-3 text-[11px] text-pearl/40">מידות במלאי החנות הזו</p>
+            <p className="mt-3 text-[11px] text-pearl/40">מידות במלאי הסניף</p>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {["40", "41", "42", "43", "44"].map((size) => (
                 <span
@@ -114,20 +114,7 @@ function HeroMock() {
           </div>
           <div className="flex flex-col items-center justify-center rounded-xl border border-gold/30 bg-gold/10 p-3">
             <QrCode className="text-gold" size={56} />
-            <p className="mt-2 text-[10px] text-gold">50×30 מ״מ</p>
-          </div>
-        </div>
-        <div className="mt-4 grid grid-cols-3 gap-2 text-center text-[11px] text-pearl/55">
-          <div className="rounded-xl border border-white/10 bg-white/[0.03] px-2 py-3">
-            <ScanLine size={16} className="mx-auto mb-1 text-gold" />
-            סריקה
-          </div>
-          <div className="rounded-xl border border-white/10 bg-white/[0.03] px-2 py-3">
-            <Store size={16} className="mx-auto mb-1 text-gold" />
-            מלאי חי
-          </div>
-          <div className="rounded-xl border border-gold/30 bg-gold/10 px-2 py-3 text-gold">
-            ₪ 299
+            <p className="mt-2 text-[10px] text-gold">סריקה במצלמה</p>
           </div>
         </div>
       </div>

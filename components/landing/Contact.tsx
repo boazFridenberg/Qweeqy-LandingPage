@@ -40,10 +40,11 @@ export function Contact() {
         <div>
           <p className="text-[12px] tracking-[0.16em] text-gold">יצירת קשר</p>
           <h2 className="mt-2 font-display text-3xl text-pearl sm:text-4xl">
-            רוצים את Qweeqy בחנות שלכם?
+            רוצים לראות איך זה עובד בחנות שלכם?
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-pearl/55">
-            השאירו פרטים ונחזור אליכם עם הדגמה ותמחור לחנות שלכם. אפשר גם לכתוב ישירות למייל או להתקשר.
+            השאירו פרטים וקבלו מידע. נראה איך סריקת QR ומלאי חי יכולים לקצר את העבודה
+            אצלכם ברצפה. אפשר גם לכתוב ישירות למייל או להתקשר.
           </p>
           <div className="mt-8 space-y-3 text-sm">
             <a
@@ -94,7 +95,7 @@ export function Contact() {
               className="grid gap-3 sm:grid-cols-2"
               onSubmit={() => setSubmitting(true)}
             >
-              <input type="hidden" name="_subject" value={`פנייה לרכישת Qweeqy — ${values.storeName}`} />
+              <input type="hidden" name="_subject" value={`בקשת הדגמה ל-Qweeqy — ${values.storeName}`} />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_next" value={nextUrl} />
@@ -150,7 +151,7 @@ export function Contact() {
                     <Loader2 size={14} className="animate-spin" /> שולחים
                   </span>
                 ) : (
-                  "שליחת פנייה לרכישה"
+                  "השאירו פרטים לקבלת הדגמה"
                 )}
               </button>
             </form>

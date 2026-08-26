@@ -9,9 +9,9 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: "Qweeqy · מערכת ניהול לחנויות",
+  title: "Qweeqy · פחות לחפש. יותר למכור.",
   description:
-    "פלטפורמה לניהול חנויות: סריקת QR ללקוח, קופה סופר-מהירה, קליטת מלאי אוטומטית ודשבורד לבעל החנות.",
+    "מערכת חכמה לניהול מידות ומלאי בחנות הפיזית. הלקוח סורק QR בלי אפליקציה, רואה מידות וצבעים במלאי, ובעל החנות מקבל תמונה ברורה של מה שמחפשים בחנות.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -23,7 +23,7 @@ const FEATURES = [
   {
     icon: LayoutDashboard,
     title: "דשבורד ניהולי",
-    copy: "מדדי מכירות, התראות מלאי נמוך, ונעליים פופולריות. באפליקציית Expo ובממשק דפדפן.",
+    copy: "אילו דגמים נסרקים, אילו מידות בודקים הלקוחות, מה חסר במלאי, ומדדי מכירות — כדי לקבל החלטות רכש טובות יותר.",
   },
 ];
 
@@ -55,33 +55,6 @@ export function OwnerApp() {
             </motion.article>
           ))}
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-6 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03]"
-        >
-          <div className="flex items-center justify-between border-b border-white/10 px-5 py-3 text-[12px] text-pearl/45">
-            <span>מידות אחרונות · Variant</span>
-            <span>יחידה אחת במלאי</span>
-          </div>
-          <div className="divide-y divide-white/5">
-            {[
-              { brand: "Nike", model: "Dunk Low", color: "Panda", size: "43" },
-              { brand: "New Balance", model: "550", color: "White/Green", size: "42" },
-              { brand: "Adidas", model: "Campus 00s", color: "Grey", size: "43" },
-            ].map((row) => (
-              <div key={row.model} className="grid grid-cols-4 items-center px-5 py-3 text-sm">
-                <Ltr className="text-pearl/50">{row.brand}</Ltr>
-                <Ltr className="text-pearl">{row.model}</Ltr>
-                <Ltr className="text-pearl/50">{row.color}</Ltr>
-                <span className="justify-self-start rounded-full border border-gold/40 px-2 py-0.5 text-[12px] text-gold">
-                  מידה {row.size}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

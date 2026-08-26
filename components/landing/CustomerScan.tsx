@@ -1,19 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Box, Footprints, Layers3, QrCode } from "lucide-react";
+import { Footprints, Layers3, MapPin, QrCode, Rotate3d, Tag, Palette } from "lucide-react";
 import { Ltr } from "@/components/landing/Ltr";
 
 const POINTS = [
   {
     icon: QrCode,
-    title: "אפס חיכוך",
-    copy: "מדבקת QR על ברקוד הנעל. הלקוח סורק במצלמת הנייד הרגילה ומגיע מיד לאתר — בלי להוריד אפליקציה.",
+    title: "QR על כל דגם",
+    copy: "הלקוח סורק במצלמת הנייד ומגיע מיד לדף המוצר — בלי להוריד אפליקציה.",
   },
   {
     icon: Layers3,
-    title: "זמינות מלאי בלייב",
-    copy: "בדיוק אילו מידות וצבעים קיימים עכשיו במלאי של החנות הספציפית שבה הלקוח עומד.",
+    title: "מידות ומלאי בסניף",
+    copy: "בדיוק אילו מידות קיימות עכשיו בחנות שבה הלקוח עומד — לא קטלוג כללי.",
+  },
+  {
+    icon: Palette,
+    title: "צבעים ומחיר",
+    copy: "הצבעים הזמינים והמחיר מוצגים מיד, בלי לחפש תווית ובלי לשאול עובד.",
   },
   {
     icon: Footprints,
@@ -21,24 +26,29 @@ const POINTS = [
     copy: "הדמיית הנעל בתלת־ממד ומציאות רבודה על הרגל — מדידה בלי להתפשט במסדרון.",
   },
   {
-    icon: Box,
-    title: "המלצות חכמות",
-    copy: "נעליים דומות שקיימות במלאי באותה חנות. לא קטלוג גלובלי — מה שיש על המדף עכשיו.",
+    icon: MapPin,
+    title: "סניפים נוספים",
+    copy: "אם המידה חסרה כאן, אפשר לבדוק זמינות בסניף אחר במקום לומר ״אין״.",
+  },
+  {
+    icon: Tag,
+    title: "המלצות במלאי",
+    copy: "מוצר דומה שכן קיים במידה של הלקוח — כדי לא לאבד את המכירה.",
   },
 ];
 
 export function CustomerScan() {
   return (
-    <section id="customer" className="px-5 py-16 sm:px-8 sm:py-24">
+    <section id="solution" className="px-5 py-16 sm:px-8 sm:py-24">
       <div className="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-2">
         <div>
-          <p className="text-[12px] tracking-[0.16em] text-gold">מנוע 01 · Web בלבד</p>
+          <p className="text-[12px] tracking-[0.16em] text-gold">הפתרון</p>
           <h2 className="mt-2 font-display text-3xl text-pearl sm:text-4xl">
-            הלקוח סורק. מקבל שירות עצמי.
+            סריקה אחת. כל המידע על המוצר.
           </h2>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-pearl/55">
-            חוויית <Ltr>Customer Scan</Ltr> מביאה את השקיפות של האונליין לרצפת המכירה — בלי אפליקציה,
-            בלי תור, ובלי לשאול עובד אם יש מידה 43.
+            לכל דגם בחנות יש <Ltr>QR Code</Ltr>. הלקוח סורק בטלפון ורואה מידות, צבעים, מחיר ומלאי —
+            בלי אפליקציה, בלי המתנה, בלי לשאול אם יש 43.
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {POINTS.map((point, index) => (
@@ -47,7 +57,7 @@ export function CustomerScan() {
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.06 }}
+                transition={{ delay: index * 0.05 }}
                 className="rounded-2xl border border-white/10 bg-white/[0.03] p-5"
               >
                 <point.icon size={18} className="text-gold" />
@@ -63,17 +73,31 @@ export function CustomerScan() {
           viewport={{ once: true }}
           className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl"
         >
-          <p className="text-[11px] text-pearl/40">תצוגת לקוח בנייד</p>
+          <p className="text-[11px] text-pearl/40">תצוגת לקוח בנייד · בלי אפליקציה</p>
           <div className="mt-4 overflow-hidden rounded-3xl border border-white/10 bg-void">
             <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
               <Ltr className="text-xs tracking-[0.18em] text-pearl">QWEEQY</Ltr>
               <span className="rounded-full bg-emerald-400/15 px-2 py-0.5 text-[10px] text-emerald-300">
-                במלאי בחנות
+                במלאי בסניף
               </span>
             </div>
-            <div className="aspect-[4/3] bg-gradient-to-b from-white/10 to-black/40 p-8">
-              <div className="flex h-full items-end justify-center">
-                <div className="h-28 w-40 rounded-[40%] bg-gradient-to-l from-zinc-200 to-zinc-500 opacity-80 blur-[1px]" />
+            <div className="relative aspect-[4/3] overflow-hidden bg-[#121214]">
+              <img
+                src="/images/samba-og-product.png"
+                alt="Adidas Samba OG"
+                className="h-full w-full object-cover object-center"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void via-transparent to-black/25" />
+              <span className="absolute top-3 start-3 rounded-full border border-gold/35 bg-void/70 px-2.5 py-1 text-[10px] tracking-wide text-gold backdrop-blur-md">
+                תצוגת 3D
+              </span>
+              <span className="absolute bottom-3 end-3 flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-black/55 text-gold backdrop-blur-md">
+                <Rotate3d size={15} />
+              </span>
+              <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5">
+                <span className="h-1.5 w-4 rounded-full bg-gold" />
+                <span className="h-1.5 w-1.5 rounded-full bg-white/25" />
+                <span className="h-1.5 w-1.5 rounded-full bg-white/25" />
               </div>
             </div>
             <div className="space-y-3 p-4">
@@ -94,9 +118,25 @@ export function CustomerScan() {
                 <span className="h-6 w-6 rounded-full bg-black" />
                 <span className="h-6 w-6 rounded-full bg-emerald-900 opacity-40" />
               </div>
+              <p className="text-[12px] text-pearl/40">מידות זמינות</p>
+              <div className="flex flex-wrap gap-1.5">
+                {["40", "41", "42", "43"].map((size) => (
+                  <span
+                    key={size}
+                    className={`rounded-md border px-2 py-1 text-[11px] ${
+                      size === "43"
+                        ? "border-gold/50 bg-gold/15 text-gold"
+                        : "border-white/10 text-pearl/70"
+                    }`}
+                  >
+                    {size}
+                  </span>
+                ))}
+              </div>
               <button type="button" className="gold-cta w-full text-[12px]">
                 מדידה ב־AR על הרגל
               </button>
+              <p className="text-center text-[11px] text-pearl/35">לבדוק זמינות בסניפים נוספים</p>
             </div>
           </div>
         </motion.div>
