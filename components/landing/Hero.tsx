@@ -32,7 +32,7 @@ export function Hero() {
             transition={{ delay: 0.16 }}
             className="mt-6 max-w-lg text-base leading-relaxed text-pearl/80 sm:text-lg"
           >
-            הלקוח סורק <Ltr>QR</Ltr> במצלמה — בלי אפליקציה — ורואה מידות ומלאי. המוכר נשאר ברצפה.
+            הלקוח סורק <Ltr>QR</Ltr> במצלמה — בלי אפליקציה — ורואה מידות ומלאי. המוכר נשאר בחנות.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
