@@ -99,7 +99,7 @@ export function Contact() {
               className="grid gap-3 sm:grid-cols-2"
               onSubmit={() => setSubmitting(true)}
             >
-              <input type="hidden" name="_subject" value={`בקשת הדגמה ל-Qweeqy — ${values.storeName}`} />
+              <input type="hidden" name="_subject" value={`בקשת הדגמה ל-Quicky — ${values.storeName}`} />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_next" value={nextUrl} />

@@ -76,7 +76,7 @@ export function CustomerScan() {
           <p className="text-[11px] text-pearl/65">תצוגת לקוח בנייד · בלי אפליקציה</p>
           <div className="mt-4 overflow-hidden rounded-3xl border border-pearl/10 bg-inset">
             <div className="flex items-center justify-between border-b border-pearl/10 px-4 py-3">
-              <Ltr className="text-xs tracking-[0.18em] text-pearl">QWEEQY</Ltr>
+              <Ltr className="text-xs tracking-[0.18em] text-pearl">Quicky</Ltr>
               <span className="rounded-full bg-emerald-400/15 px-2 py-0.5 text-[10px] text-emerald-300">
                 במלאי בסניף
               </span>

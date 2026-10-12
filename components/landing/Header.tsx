@@ -24,7 +24,7 @@ export function Header() {
           <span className="flex h-8 w-8 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-[11px] font-bold text-gold">
             Q
           </span>
-          <Ltr className="text-sm font-semibold tracking-[0.22em] text-pearl">QWEEQY</Ltr>
+          <Ltr className="text-sm font-semibold tracking-[0.22em] text-pearl">Quicky</Ltr>
         </a>
 
         <div className="hidden items-center gap-7 md:flex">

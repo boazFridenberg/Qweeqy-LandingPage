@@ -12,7 +12,7 @@ export function About() {
         </h2>
         <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <p className="text-base leading-relaxed text-pearl/85">
-            <Ltr>Qweeqy</Ltr> לא מחליפה את המוכר — היא נותנת לו כלי שעובד מהר וחכם יותר. הלקוח רואה
+            <Ltr>Quicky</Ltr> לא מחליפה את המוכר — היא נותנת לו כלי שעובד מהר וחכם יותר. הלקוח רואה
             מידות ומלאי בטלפון, והצוות נשאר ברצפה במקום לרוץ למחסן על כל שאלה.
           </p>
           <p className="text-base leading-relaxed text-pearl/85">

@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-pearl/10 px-5 py-12 sm:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <Ltr className="text-lg font-semibold tracking-[0.22em] text-pearl">QWEEQY</Ltr>
+          <Ltr className="text-lg font-semibold tracking-[0.22em] text-pearl">Quicky</Ltr>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-pearl/75">
             פחות לחפש. יותר למכור. מערכת לניהול מידות ומלאי בחנות הפיזית.
           </p>
@@ -38,7 +38,7 @@ export function Footer() {
         </div>
       </div>
       <p className="mx-auto mt-10 max-w-6xl text-[12px] text-pearl/55">
-        © {new Date().getFullYear()} Qweeqy · מערכת הפעלה לחנות שלך
+        © {new Date().getFullYear()} Quicky · מערכת הפעלה לחנות שלך
       </p>
       <p className="mx-auto mt-2 max-w-6xl text-[12px] text-pearl/55">
         המערכת פותחה על ידי בעז פרידנברג · מייל:{" "}
